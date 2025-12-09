@@ -1,0 +1,41 @@
+CREATE TABLE nombre_estab (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre_establecimiento TEXT
+);
+
+CREATE TABLE nombre_act (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  actividad TEXT
+);
+
+CREATE TABLE cod_postal (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  codigo_postal TEXT
+);
+
+CREATE TABLE tipo_unieco (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  tipo_unidad TEXT
+);
+
+CREATE TABLE products (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre TEXT,
+  precio REAL,
+  codigo_act INTEGER
+);
+
+CREATE TABLE orders (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  fecha TEXT,
+  cliente_nombre TEXT,
+  total REAL
+);
+
+CREATE TABLE order_items (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  order_id INTEGER,
+  product_id INTEGER,
+  cantidad INTEGER,
+  subtotal REAL
+);
